@@ -12,14 +12,18 @@ class RecipePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildRecipeAppBar(),
-      body: Column(
-        children: [
-          RecipeTitle(),
-          RecipeMenu(),
-          RecipeListItem("coffee", "Made Coffee"),
-          RecipeListItem("burger", "Made Burger"),
-          RecipeListItem("pizza", "Made Pizza"),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RecipeTitle(),
+            RecipeMenu(),
+            RecipeListItem("coffee", "Made Coffee"),
+            RecipeListItem("burger", "Made Burger"),
+            RecipeListItem("pizza", "Made Pizza"),
+          ],
+        ),
       ),
     );
   }
